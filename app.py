@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
 # Load dataset
-df = pd.read_csv("retail_store_sales.csv")
+df = pd.read_csv("cleaned_retail_sales.csv")
 
 # Prepare features
 X = df[['Category','Location','Price Per Unit','Transaction Month','Discount Applied']]
@@ -49,3 +49,4 @@ if st.button("Predict Quantity Sold"):
 
     revenue = prediction * price
     st.write(f"Estimated Revenue: ₱{round(revenue,2)}")
+
